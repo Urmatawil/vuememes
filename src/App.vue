@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <listmeme />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import listmeme from "./components/listmemes";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    listmeme,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: rgb(200, 220, 240);
+  --background: #fff;
+}
+
+.dark {
+  --background: #222222;
+}
+
+html {
+  background-color: var(--background);
+}
+
+.container {
+  background-color: var(--background);
+  overflow: hidden;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
