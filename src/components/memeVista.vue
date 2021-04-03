@@ -1,7 +1,7 @@
 <template>
   <div class="meme">
     <p>{{ me.name }}</p>
-    <img :src="me.url" :alt="me.name" />
+    <img :src="me.url" :alt="me.name" loading="lazy"/>
   </div>
 </template>
 
